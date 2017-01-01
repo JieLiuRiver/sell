@@ -1,0 +1,15 @@
+
+@import './mixin.styl'
+@import './icon.styl'
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)
+  .test
+    &::after
+	    -webkit-transform: scaleY(0.7)
+	    transform: scaleY(0.7)
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+  .test
+    &::after
+	    -webkit-transform: scaleY(0.5)
+	    transform: scaleY(0.5)
