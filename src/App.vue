@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    <router-view :seller="seller"></router-view>
+    <router-view :seller="seller" keep-alive></router-view>
   </div>
 </template>
 
@@ -29,7 +29,7 @@
         seller: {
           id: (() => {
             let queryParam = urlParse();
-            console.log(queryParam);
+            // console.log(queryParam);
             return queryParam.id;
           })()
         }
@@ -40,7 +40,7 @@
         response = response.body;
         if (response.errno === ERR_OK) {
           // this.seller = response.data;
-          this.seller = Object.assign({}, this.seller, response.data);   // 这种方式可以拿到id
+          this.seller = Object.assign({}, this.seller, response.data);   // 这种方式可以拿到id haha
         }
       });
     },
